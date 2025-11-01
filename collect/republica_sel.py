@@ -20,7 +20,6 @@ sheet.write(0, 1, 'summary')
 sheet.write(0, 2, 'published_time')
 sheet.write(0, 3, 'text')
 
-    
 
 def save_to_excel(soup):
     global n
@@ -108,10 +107,10 @@ if __name__ == '__main__':
                     html = browser.page_source
                     soup = BeautifulSoup(html, 'lxml')
                     if save_to_excel(soup):
-                            break
+                        break
                     else:
-                            print(f"tried {i+1} time(s)")
-                            time.sleep(2)
+                        print(f"tried {i+1} time(s)")
+                        time.sleep(2)
                 except Exception as e:
                     print(f"save_to_excel: {e}")
 
@@ -123,5 +122,5 @@ if __name__ == '__main__':
     # browser.switch_to.window(all_h[1])
 
     browser.quit()
-    book.save('np_ms.xls')
+    book.save('../data/np_ms.xls')
     print("bingo!")

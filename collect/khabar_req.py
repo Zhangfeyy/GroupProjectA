@@ -100,5 +100,5 @@ if __name__ == '__main__':
         page += 1
         time.sleep(2)
 
-    book.save('./data/np_al.xls')
+    book.save('../data/np_al.xls')
     print("bingo!")
