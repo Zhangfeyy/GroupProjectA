@@ -2,3 +2,6 @@
 __pycache__/
 jsons/
 data/
+sample/
+models/
+topic_modeling_backup/
